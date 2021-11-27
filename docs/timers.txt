@@ -1,0 +1,72 @@
+These commands will work with !timers and !timer interchangeably:
+
+  !timer add namehere messagehere
+  !timer add namehere !commandhere
+  !timer add namehere ?functionhere  # Only works with pre-set up functions. Not currently implemented.
+  !addtimer namehere messagehere
+  
+  !timer set [fixedminute / minute / time] [05 / 5 / quarter past ]
+
+============================================================================================================
+TIMED MESSAGE EVERY X MINUTES: 
+=============================================================================================================
+
+MODE: RANDOM
+  -  Every X minutes, send a random message from the timed messages that doesn't have a fixed minute time set
+         (but try not to repeat if it was recently used. This is done via a percentage of how many there are. 
+         E.g. If there are 4 messages, don't send a message that has been used in the last three. 
+         If there are 8, don't use one in the last 5) 
+		Formula is half of the number of valid messages, rounded down, plus one.
+		Valid means those that aren't set for a fixed time, or aren't disabled due to tags, title, current game etc.
+
+MODE: SEQUENCE
+  - Every X minutes, send the next message in the cycle that doesn't have a fixed minute time set
+
+
+
+============================================================================================================
+DIVIDE TIMED MESSAGES EVENLY OVER X HOURS:
+=============================================================================================================
+- Auto calculate a division to send each timed message evenly across the span of X hours.
+e.g. If you have 4 messages spread across one hour, it will send one every quarter of an hour.
+     or if you have 16 across two hours, it'll send one every 7.5 minutes (etc)
+
+
+
+These will operate indepdently of messages that have been set to send at the same "minutes past" every hour.
+
+============================================================================================================
+EXAMPLES:
+============================================================================================================
+
+- Using a timer set to every 15 minutes, plus sending all the "on the minutes" messages set up.
+2:00pm - <Fixed minute Discord link message>
+2:01pm - <Message about pronounts> (the streamer went live at 1:46, and the messages are set to send every 15 minutes)
+2:16pm - <Message about charity link>
+2:30pm - <Fixed minute twitter link message>
+2:31pm - <Message about subscribing>
+
+
+============================================================================================================
+TIMER SETTINGS:
+============================================================================================================
+
+ORDER:
+- random
+- sequence
+
+DELAY MODE:
+- fixed # Every X minutes
+- split # Split evenly across given number of hours (still operates as above, but the bot will calculate the fixed time value)
+
+SPLITDURATION:
+- Number of hours to split all eligible messages across evenly
+
+FIXED MINUTE DELAY:
+- Number of minutes between each timer message
+
+WAIT FOR LULL:
+(not yet implemented)
+- 0-15 # If it's time to send a message, don't send it if the chat messages are going very quickly. 
+	   # Wait for a lull in the conversation of this number of seconds.
+

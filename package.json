@@ -1,0 +1,33 @@
+{
+  "name": "fernwizardly",
+  "version": "0.0.1",
+  "description": "Basic framework for a twitch chatbot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.5",
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "cheese-name": "^2.0.1",
+    "@twurple/api": "^5.0.9",
+    "@twurple/auth": "^5.0.9",
+    "@twurple/chat": "^5.0.9",
+    "winston": "^3.3.3",
+    "cookie-session": "^1.4.0",
+    "passport": "^0.5.0",
+    "dotenv": "^10.0.0",
+    "cookie-parser": "^1.4.6",
+    "body-parser": "^1.19.0",
+    "passport-oauth": "^1.0.0",
+    "ejs": "^3.1.6"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-mvp-node"
+  },
+  "license": "MIT"
+}
