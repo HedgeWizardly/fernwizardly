@@ -1,0 +1,61 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Well hey there, good lurkin' ;) - Just a little lurk pun there haha :] </h1>
+      <h2></h2>
+    </header>
+
+    <main>
+      <p>
+        Each lurk message will be followed by: 
+        <br>Each unlurk message will be followed by:
+        <br>
+        <br>
+        I haven't finished this yet (obviously), and the toggle switches currently don't do anything!!
+        <br>
+        <br> To do: 
+        <br> - Make toggle switches work / do stuff
+        <br> - Make it so we can edit, remove, and add entries
+        <br> - Pull in the lurk and unlurk prefixes (this bit is easy enough I just haven't gotten around to it)
+        <br> - Probably make the text wrap around at a certain length
+      </p>
+      
+      
+      <table>
+   <tr>
+      <th>Lurk</th><th>Unlurk</th><th>Enabled</th>
+   </tr>
+
+   <% for (var i = 0; i < messages.length; i++) { %>
+    <tr>
+      <td><%= messages[i].lurk %></td>
+      <td><%= messages[i].unlurk %></td>
+      <td><div class="checkbox">
+        <input type="checkbox" id="toggleswitch" <%= messages[i].enabled %> > 
+        <label for="toggleswitch"></label></td>
+    </tr>    
+   <% } %>
+
+</table>
+      
+      
+    </main>
+
+
+  </body>
+  <footer>
+     
+  </footer>
+</html>

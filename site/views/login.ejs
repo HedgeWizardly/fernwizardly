@@ -1,0 +1,223 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    :root {
+  --color-bg: #b7e6dc;
+  --color-text-main: #0f8fe6;
+  --color-primary: #0f8fe6;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+/* Very light scaling for our illustration */
+.illo-container {
+  grid-column: 3 / 3;
+  grid-row: 1;
+}
+.illustration {
+  max-width: 100%;
+  max-height: 150px;
+  margin-top: 1rem;
+}
+      
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+  margin-left:40px;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/* Title h1 style */
+.title {
+  color: var(--color-text-main);
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 2rem 0 0;
+}
+
+form {
+  margin: 0.75rem 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+label {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+.instructions p {
+  font-size: 1rem;
+}
+  h1 {
+  color: var(--color-text-main);
+}
+h2 {
+  color: #4C9A02;
+}
+
+.button {
+  color: white;
+  background-color: #6441a5;
+  
+  justify-content: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 40px 0px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.button:hover {
+  background-color: #573596;
+
+}
+
+thead {
+  background-color: #b7e137;
+}
+
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+table {
+  background-color: #b7e6dc;
+  
+}
+      .grid-container {
+  display: inline-grid;
+         grid-template-columns: 200px 200px 100px
+}
+      
+      .mainbody {
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+      
+      .leftcol {
+        grid-column: 1 / 1;
+      }
+      .rightcol {
+        grid-column: 3 / 3;
+      }
+      
+      #twitchbutton {
+        background-image: url("https://cdn.glitch.com/4d430a5b-f66f-41a0-ad9b-1336f3c90482%2F1200px-Twitch_Glitch_Logo_White.svg.png?v=1631318078597");
+        background-size: auto 30px;
+        background-position: 8px 50%;
+        background-repeat:no-repeat;
+        padding: 0.8em 0.5em 0.8em 3em;
+        width:200px;
+      }
+      
+      
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <br>
+    <main>
+      <div class="grid-container">
+      <div class="illo-container">
+        <img src="https://cdn.glitch.me/0fa20033-bd39-4280-a5ae-291bc0610632%2F3.0.png?v=1635592175381" class="illustration" alt="Pumpkaamy logo"</img>
+      </div>
+      <div class="mainbody"><h1>Magic Sharkbot V2</h1> 
+      </div>
+      <div class="leftcol">
+      <a class="button" id="twitchbutton" href="/auth/twitch">Log In with Twitch</a> </div>
+      
+      
+      </div>      
+    </main>
+
+
+
+  </body>
+</html>

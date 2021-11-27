@@ -1,0 +1,10 @@
+{
+  "streamer":"Check out USERNAME over at twitch.tv/USERNAME!",
+  "streaming":"They were last streaming CATEGORY!",
+  "nonstreamer":"Big shoutout to USERNAME, a certified good egg!",
+  "notfound":"I can't seem to find that user, are you sure you typed that right?",
+  "custommessages":{
+    "cakejumper":"Definitely gotta be one of my top ten favourite cakejumpers. If you're not following her, WHAT ARE YOU DOING WITH YOUR LIFE?",
+    "hedgewizardly":"They don't stream, or anything, but they are well known for doing both stuff AND things on many an occasion!"
+  }
+}
